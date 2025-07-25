@@ -17,9 +17,16 @@ def send_test_email():
     message = f"""\
 From: {SMTP_FROM}
 To: {SMTP_TO}
-Subject: SMTP Test Email
+Subject: Quick question about [their business]
 
- This is a test email sent via Python using SMTP credentials from your .env file."""
+Hi [Name],
+
+Hope you're doing well! I came across your profile and thought this might be of interest.
+
+Let me know what you think - happy to chat.
+
+Best,  
+Aquib from Bewhoop"""
 
     context = ssl.create_default_context()
     try:
