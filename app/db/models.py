@@ -50,6 +50,8 @@ class Chat(Base):
     tags = Column(ARRAY(String), default=list)  # optional
     is_escalated = Column(Boolean, default=False)
     created_at = Column(DateTime, default=datetime.utcnow)
+    # NEW FIELD for deduplication
+    message_ids = Column(ARRAY(String), default=list)
 
 class Lead(Base):
     __tablename__ = "leads"
